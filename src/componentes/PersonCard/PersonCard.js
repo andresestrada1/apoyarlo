@@ -11,6 +11,11 @@ class PersonCard extends React.Component{
         }
     }
 
+    cambiarEdad  = () =>{
+        this.setState({age: this.state.age+1})
+
+    }
+
 
     render(){
 
@@ -21,6 +26,7 @@ class PersonCard extends React.Component{
                 <h3>{firstName}, {lastName}</h3>
                 <p><b>Edad: </b>{this.state.age}</p>
                 <p><b>haircolor: </b>{this.state.haircolor}</p>
+                <button className="bnt btn-info" onClick={this.cambiarEdad}>Boton de cumpleaños: {firstName}</button>
             </div>
         )
     }
